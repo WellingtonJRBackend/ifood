@@ -19,8 +19,10 @@ public class Grupo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private UUID id;
+	
 	@Column(nullable = false)
 	private String nome;
+	
 	@ManyToMany
 	@JoinTable(name = "grupo_permissao",
 	           joinColumns = @JoinColumn(name = "grupo_id"),
