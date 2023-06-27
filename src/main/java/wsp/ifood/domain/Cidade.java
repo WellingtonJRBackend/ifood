@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -15,7 +17,7 @@ public class Cidade {
 	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private UUID id;
 	@Column(nullable = false, length = 65)
 	private String nome;
 }

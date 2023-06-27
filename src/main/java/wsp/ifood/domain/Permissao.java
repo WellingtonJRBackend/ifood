@@ -12,11 +12,14 @@ import java.util.UUID;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Data
 @Entity
-public class FormaPagamento {
+public class Permissao {
+	
 	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private UUID id;
+	@Column(nullable = false, length = 65)
+	private String nome;
 	@Column
 	private String descricao;
 }
