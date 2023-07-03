@@ -20,4 +20,7 @@ public class Cidade {
 	private UUID id;
 	@Column(nullable = false, length = 65)
 	private String nome;
+	@ManyToOne
+	@JoinColumn(nullable = false)
+	private Estado estado;
 }
